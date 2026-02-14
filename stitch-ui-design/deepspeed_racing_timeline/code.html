@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deepspeed Racing Timeline | Autonomous F1TENTH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "race-dark": "#0a0e17",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .timeline-line {
+            background: linear-gradient(180deg, #0d59f2 0%, #0d59f2 70%, rgba(13, 89, 242, 0.1) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 89, 242, 0.1);
+        }
+        .dark-card {
+            background: #0a0e17;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-primary {
+            box-shadow: 0 0 20px rgba(13, 89, 242, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white">bolt</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter uppercase">Deepspeed<span class="text-primary">Racing</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
+<a class="hover:text-primary transition-colors" href="#">Telemetry</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="#">Timeline</a>
+<a class="hover:text-primary transition-colors" href="#">The Car</a>
+<a class="hover:text-primary transition-colors" href="#">Technical Docs</a>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded font-bold transition-all shadow-lg shadow-primary/20">
+                    Live Stream
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Header -->
+<header class="relative overflow-hidden bg-race-dark py-20 border-b border-white/5">
+<div class="absolute inset-0 opacity-20">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#0d59f2_0%,transparent_50%)]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Season 2024 Active
+                    </div>
+<h1 class="text-5xl lg:text-7xl font-bold text-white leading-none mb-6">
+                        DRIVING THE<br/><span class="text-primary">FUTURE</span> OF SPEED
+                    </h1>
+<p class="text-slate-400 text-lg max-w-lg mb-8 leading-relaxed">
+                        Track the evolution of the Deepspeed autonomous racing platform. From raw LIDAR data to podium finishes at the global F1TENTH Grand Prix.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 border border-white/10 p-6 rounded-lg backdrop-blur-sm">
+<span class="text-slate-500 text-xs uppercase tracking-widest block mb-2">Global Ranking</span>
+<span class="text-4xl font-bold text-white">#04</span>
+<div class="mt-2 text-emerald-400 text-xs flex items-center">
+<span class="material-icons text-sm">trending_up</span> +2 slots this season
+                        </div>
+</div>
+<div class="bg-white/5 border border-white/10 p-6 rounded-lg backdrop-blur-sm">
+<span class="text-slate-500 text-xs uppercase tracking-widest block mb-2">Total Podiums</span>
+<span class="text-4xl font-bold text-white">12</span>
+<div class="mt-2 text-primary text-xs flex items-center">
+<span class="material-icons text-sm">workspace_premium</span> Elite Status
+                        </div>
+</div>
+<div class="col-span-2 bg-primary p-8 rounded-lg glow-primary">
+<div class="flex justify-between items-center mb-4">
+<span class="text-white/80 text-xs uppercase tracking-widest font-bold">Next Grand Prix: ICRA 2024</span>
+<span class="material-icons text-white">timer</span>
+</div>
+<div class="flex gap-6">
+<div><span class="text-3xl font-bold text-white">14</span><span class="text-white/60 text-xs ml-1 uppercase">Days</span></div>
+<div><span class="text-3xl font-bold text-white">08</span><span class="text-white/60 text-xs ml-1 uppercase">Hrs</span></div>
+<div><span class="text-3xl font-bold text-white">42</span><span class="text-white/60 text-xs ml-1 uppercase">Min</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Filters Section -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-primary/10 pb-8">
+<div>
+<h2 class="text-3xl font-bold mb-2">Season Timeline</h2>
+<p class="text-slate-500 dark:text-slate-400 uppercase text-xs tracking-[0.2em]">Engineering &amp; Racing Milestones</p>
+</div>
+<div class="flex bg-white dark:bg-white/5 p-1 rounded-lg border border-primary/10">
+<button class="px-6 py-2 bg-primary text-white rounded font-bold text-sm transition-all shadow-md">All Events</button>
+<button class="px-6 py-2 text-slate-500 dark:text-slate-400 hover:text-primary rounded font-bold text-sm transition-all">Past Races</button>
+<button class="px-6 py-2 text-slate-500 dark:text-slate-400 hover:text-primary rounded font-bold text-sm transition-all">Development</button>
+</div>
+</div>
+</section>
+<!-- Timeline Body -->
+<main class="max-w-7xl mx-auto px-6 pb-24 relative">
+<!-- Central Line -->
+<div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 bg-primary/20 md:-translate-x-1/2">
+<div class="w-full h-3/4 timeline-line"></div>
+</div>
+<div class="space-y-24 relative">
+<!-- Entry 1: Upcoming Event -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="w-full md:w-5/12 hidden md:block text-right">
+<span class="text-primary font-bold text-sm uppercase tracking-widest">Upcoming</span>
+<h3 class="text-xl font-bold mt-1">ICRA 2024 Grand Prix</h3>
+<p class="text-slate-500 text-sm mt-2">Yokohama, Japan</p>
+</div>
+<div class="z-10 w-12 h-12 rounded-full bg-primary border-4 border-background-light dark:border-background-dark flex items-center justify-center shadow-lg">
+<span class="material-icons text-white text-xl">flag</span>
+</div>
+<div class="w-full md:w-5/12 mt-6 md:mt-0">
+<div class="glass-card dark:bg-white/5 p-6 rounded-xl border border-primary/20">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 rounded overflow-hidden bg-slate-200">
+<img alt="Japan circuit map" class="w-full h-full object-cover" data-alt="Technical circuit layout for Yokohama Japan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5isYwEjk7Mw8o884YRgKYQj0zJ8DlXH7c5aHAdpsu2FaBTr58o303TCbyfXlFVahO1KEBqeqKHL794PfKNj5tf-jXRXGJmcJwmrnIq0eQKU-ITtyLypzKdonPtPr3YXiKc6VlfNR7Y791gdRYGA-M2TlqPGXvUG5QcR3l5QVsd5Zm7VVPLXXszS6mLMK_1d6DvLvjoyj_rPpljRFqOqjgX4VRVYK8hAwXl4MlEJrAzPYcFNA3F3EC0kwA7yAxR_7fUqA2ijnY8no"/>
+</div>
+<div>
+<span class="text-xs text-primary font-bold uppercase">May 13-17, 2024</span>
+<h4 class="font-bold">Circuit Strategy Finalized</h4>
+</div>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                            Our team is deploying the new Path-Optimized Neural Planner for the complex chicane sequences of the Yokohama track.
+                        </p>
+<div class="flex gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase">Software</span>
+<span class="bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-slate-300 px-3 py-1 rounded-full text-[10px] font-bold uppercase">High Intensity</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Entry 2: Major Win (Dark Card) -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="w-full md:w-5/12 mt-6 md:mt-0 order-2 md:order-1">
+<div class="dark-card p-8 rounded-xl relative overflow-hidden group hover:border-primary/50 transition-colors">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl transition-opacity group-hover:opacity-100 opacity-0"></div>
+<div class="flex items-start justify-between mb-6">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-tighter">Event Winner</span>
+<h3 class="text-2xl font-bold text-white mt-1">F1TENTH US Open</h3>
+</div>
+<div class="w-12 h-12 bg-yellow-500/20 rounded flex items-center justify-center">
+<span class="material-icons text-yellow-500">emoji_events</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-white/5 p-4 rounded">
+<p class="text-white/40 text-[10px] uppercase font-bold">Top Speed</p>
+<p class="text-lg font-bold text-white">4.2 m/s</p>
+</div>
+<div class="bg-white/5 p-4 rounded">
+<p class="text-white/40 text-[10px] uppercase font-bold">Lap Variance</p>
+<p class="text-lg font-bold text-white">±0.04s</p>
+</div>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Secured P1 after a flawless 20-lap stint. The vehicle demonstrated superior overtaking logic in the final sector.
+                        </p>
+<button class="w-full py-3 border border-primary text-primary font-bold rounded hover:bg-primary hover:text-white transition-all text-sm uppercase tracking-widest">
+                            View Race Telemetry
+                        </button>
+</div>
+</div>
+<div class="z-10 w-12 h-12 rounded-full bg-primary border-4 border-background-light dark:border-background-dark flex items-center justify-center shadow-lg order-1 md:order-2">
+<span class="material-icons text-white text-xl">workspace_premium</span>
+</div>
+<div class="w-full md:w-5/12 hidden md:block order-3">
+<div class="pl-12">
+<span class="text-slate-500 font-bold text-sm uppercase tracking-widest">October 2023</span>
+<h3 class="text-xl font-bold mt-1">Detroit, Michigan</h3>
+<p class="text-slate-500 text-sm mt-2">Intelligent Systems Conference</p>
+</div>
+</div>
+</div>
+<!-- Entry 3: Engineering Milestone -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="w-full md:w-5/12 hidden md:block text-right">
+<span class="text-slate-500 font-bold text-sm uppercase tracking-widest">Engineering Release</span>
+<h3 class="text-xl font-bold mt-1">Lidar Fusion v2.0</h3>
+<p class="text-slate-500 text-sm mt-2">Perception Stack Upgrade</p>
+</div>
+<div class="z-10 w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800 border-4 border-background-light dark:border-background-dark flex items-center justify-center shadow-md">
+<span class="material-icons text-slate-500 dark:text-slate-400 text-xl">settings_input_component</span>
+</div>
+<div class="w-full md:w-5/12 mt-6 md:mt-0">
+<div class="border border-slate-200 dark:border-white/10 p-6 rounded-xl bg-white dark:bg-white/5">
+<h4 class="font-bold mb-4 flex items-center gap-2">
+<span class="material-icons text-xs text-primary">circle</span>
+                            SLAM Integration
+                        </h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between text-xs">
+<span class="text-slate-500">Mapping Accuracy</span>
+<span class="font-bold text-primary">99.2%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[92%]"></div>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                                Transitioned to a real-time particle filter localization system, reducing CPU overhead by 25%.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Entry 4: Past Race (Image Focus) -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full">
+<div class="w-full md:w-5/12 mt-6 md:mt-0 order-2 md:order-1">
+<div class="glass-card p-2 rounded-xl border border-primary/10 group">
+<div class="relative rounded-lg overflow-hidden h-48 mb-4">
+<img alt="Race track action" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="High speed autonomous car on a sleek indoor race track" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ1-Ut_212Rl9zqpcjMM55H4MyqT0vJb3RFW_VztzeniPzZ8HiaqU6kVuO8Pdkd72K5RfcIE3Mki7yTa1F5UYizfFRzwAO1Efj8nyFLjyp2aBQSgFRM_KmIY0KM578jaOxnqJ6x6aGPK110_nD01W9T_O_jPNsY1kCUAQRPNroq_Lc-JRA-VMsJLzF1MQioC_kTe_IEi0PAd8J19BUs_nEdtgvte-o3x0ebCXqxxzZJweLkWR5XWvlzGPLep7-MydD51_bYjfNnAs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="text-white font-bold">F1TENTH Europe</span>
+<p class="text-white/60 text-xs uppercase">Berlin, Germany</p>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-amber-500 font-bold text-sm italic">P3 Podium</span>
+<span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+<span class="text-slate-500 text-xs">July 2023</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+                                Overcame a sensor failure in the qualifying rounds to finish strong on a high-grip surface.
+                            </p>
+</div>
+</div>
+</div>
+<div class="z-10 w-12 h-12 rounded-full bg-primary/20 border-4 border-background-light dark:border-background-dark flex items-center justify-center shadow-lg order-1 md:order-2">
+<span class="material-icons text-primary text-xl">sensors</span>
+</div>
+<div class="w-full md:w-5/12 hidden md:block order-3">
+<div class="pl-12">
+<span class="text-slate-500 font-bold text-sm uppercase tracking-widest">Berlin Grand Prix</span>
+<h3 class="text-xl font-bold mt-1">Podium Finish</h3>
+<div class="mt-4 flex flex-wrap gap-2">
+<div class="bg-slate-100 dark:bg-white/5 px-3 py-1 rounded text-[10px] font-medium">Lidar v1.8</div>
+<div class="bg-slate-100 dark:bg-white/5 px-3 py-1 rounded text-[10px] font-medium">Pure Pursuit</div>
+<div class="bg-slate-100 dark:bg-white/5 px-3 py-1 rounded text-[10px] font-medium">Ackermann</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Stats -->
+<footer class="bg-race-dark py-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center md:text-left">
+<p class="text-primary font-bold text-3xl mb-1">2,480</p>
+<p class="text-slate-500 text-xs uppercase tracking-widest font-bold">KM Raced</p>
+</div>
+<div class="text-center md:text-left">
+<p class="text-white font-bold text-3xl mb-1">12</p>
+<p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Podiums</p>
+</div>
+<div class="text-center md:text-left">
+<p class="text-white font-bold text-3xl mb-1">14</p>
+<p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Countries</p>
+</div>
+<div class="text-center md:text-left">
+<p class="text-white font-bold text-3xl mb-1">86ms</p>
+<p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Avg Latency</p>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 bg-primary/20 rounded flex items-center justify-center">
+<span class="material-icons text-primary text-sm">bolt</span>
+</div>
+<span class="text-white/60 text-sm tracking-tight">© 2024 DEEPSPEED AUTONOMOUS RACING</span>
+</div>
+<div class="flex gap-8">
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-icons text-xl">share</span></a>
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-icons text-xl">code</span></a>
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-icons text-xl">email</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deepspeed Insights &amp; News | Autonomous Racing Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .editorial-gradient {
+            background: linear-gradient(to top, rgba(16, 22, 34, 0.9) 0%, rgba(16, 22, 34, 0.4) 50%, transparent 100%);
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+        .speed-pattern {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(13, 89, 242, 0.03) 20px, rgba(13, 89, 242, 0.03) 40px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-icons text-white">speed</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter uppercase italic">Deep<span class="text-primary">speed</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Racing Team</a>
+<a class="text-primary" href="#">Insights</a>
+<a class="hover:text-primary transition-colors" href="#">Technology</a>
+<a class="hover:text-primary transition-colors" href="#">Partners</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-primary/10 text-primary transition-colors">
+<span class="material-icons">search</span>
+</button>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    Join the Grid
+                </button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Header & Filters -->
+<header class="mb-12">
+<h1 class="text-6xl font-bold mb-6 tracking-tight">The <span class="text-primary italic">Circuit</span> Brief</h1>
+<div class="flex flex-wrap items-center gap-4 border-y border-primary/10 py-6">
+<button class="px-6 py-2 bg-primary text-white rounded-full text-sm font-bold uppercase tracking-wider">All Stories</button>
+<button class="px-6 py-2 bg-primary/5 hover:bg-primary/10 text-slate-600 dark:text-slate-400 rounded-full text-sm font-bold uppercase tracking-wider transition-colors">Autonomous Tech</button>
+<button class="px-6 py-2 bg-primary/5 hover:bg-primary/10 text-slate-600 dark:text-slate-400 rounded-full text-sm font-bold uppercase tracking-wider transition-colors">Race Updates</button>
+<button class="px-6 py-2 bg-primary/5 hover:bg-primary/10 text-slate-600 dark:text-slate-400 rounded-full text-sm font-bold uppercase tracking-wider transition-colors">Sponsorship</button>
+<button class="px-6 py-2 bg-primary/5 hover:bg-primary/10 text-slate-600 dark:text-slate-400 rounded-full text-sm font-bold uppercase tracking-wider transition-colors">Team Life</button>
+</div>
+</header>
+<!-- Featured Story -->
+<section class="mb-12 relative group overflow-hidden rounded-xl h-[600px] shadow-2xl">
+<img alt="F1TENTH Autonomous Car" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern autonomous racing car on indoor track" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwybhuawTq51At4g5amdKN5UAvqWTLCdq5_RW_mcMBKZ5t9E0Oi7nALbIbUG-sVtMg53ELQFNupdmoG8t6XULLu99bW_PFbWwSF8s5ilcphWCnpFs-M90Pb9ntqdX-t7K_WBlMfATNLagt-j-3r9AuUbhMdk7jQY0RH-Jrmt8_Gc-hQQ1x0z1U3h2J_-m30UVcf_BI4pBW6M0xl4oAkSZe8LQfgEudocBcPvCHxVsAfjX6jNW-ETyocUlAo1GqF_nGrIHIrKlS0XQ"/>
+<div class="absolute inset-0 editorial-gradient flex flex-col justify-end p-12">
+<div class="flex items-center gap-4 mb-4">
+<span class="px-3 py-1 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded">Technical Breakthrough</span>
+<span class="text-slate-300 text-sm font-medium flex items-center gap-1">
+<span class="material-icons text-sm">schedule</span> 8 MIN READ
+                    </span>
+</div>
+<h2 class="text-5xl md:text-6xl font-bold text-white mb-6 max-w-4xl leading-[1.1]">
+                    Mastering the Hairpin: Our New RL Model for Precision Cornering
+                </h2>
+<p class="text-slate-300 text-xl max-w-2xl mb-8 leading-relaxed">
+                    By leveraging asynchronous reinforcement learning, we've shaved 1.2 seconds off our lap times at the Montreal GP circuit.
+                </p>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all flex items-center gap-2 group/btn">
+                        Read Full Insight 
+                        <span class="material-icons transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-20">
+<!-- News Card 1 -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[16/9] mb-6">
+<img alt="Team working in lab" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Engineers working on robot hardware lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXUaMYxwIPmlS7l_qLfnKi5AHGkzAEwQQe-1B2FSHTP8UarVSIKGncIPlU0j-VTQb6UlPc0BrCYRYTU9skoezpp-JZaZhF-mSEKweEerSApWh78EYe7D6t8R0rCACBNu7ewfbK4FkSsAkKNzJtxIKvskMLTGKVEH2c4B5ycn9ALcjR0O7TsE3fNNkYEBPYlu45lEA0QCGr2kDY4-t93V5I2J_qtBhHjUZKfPcZAXCWIDpvv-vV2cjFes2w3KZ3_SDJhPnAmmqsukk"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-primary text-xs font-bold uppercase tracking-widest rounded">Team Update</span>
+</div>
+</div>
+<div class="flex items-center gap-4 mb-3 text-xs font-bold text-primary tracking-widest uppercase">
+<span>OCTOBER 24, 2023</span>
+<span class="w-1 h-1 bg-primary rounded-full"></span>
+<span>ENGINEERING</span>
+</div>
+<h3 class="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">Beyond Simulation: The Challenges of Real-World Telemetry Gap</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 line-clamp-2">How we addressed the discrepancy between our digital twin performance and physical track behavior during the summer testing phase.</p>
+<a class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-sm text-primary group-hover:gap-4 transition-all" href="#">
+                    Explore Article <span class="material-icons text-sm">east</span>
+</a>
+</div>
+<!-- News Card 2 - Sidebar Style -->
+<div class="md:col-span-4 space-y-8">
+<div class="bg-primary/5 dark:bg-primary/10 p-8 rounded-xl border border-primary/20 speed-pattern">
+<h4 class="text-sm font-bold uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
+<span class="material-icons text-lg">electric_bolt</span> Fast Track News
+                    </h4>
+<ul class="space-y-6">
+<li class="border-b border-primary/10 pb-6 last:border-0 last:pb-0">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Live Results</span>
+<a class="block font-bold hover:text-primary transition-colors mt-1" href="#">Podium Finish at the Detroit Autonomous Challenge</a>
+</li>
+<li class="border-b border-primary/10 pb-6 last:border-0 last:pb-0">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Hardware</span>
+<a class="block font-bold hover:text-primary transition-colors mt-1" href="#">Integrating the new NVIDIA Orin for Low-Latency Perception</a>
+</li>
+<li class="border-b border-primary/10 pb-6 last:border-0 last:pb-0">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Community</span>
+<a class="block font-bold hover:text-primary transition-colors mt-1" href="#">Deepspeed Open Source: Contributing to F1TENTH Libs</a>
+</li>
+</ul>
+<button class="w-full mt-8 py-3 border-2 border-primary text-primary font-bold uppercase tracking-widest text-xs rounded-lg hover:bg-primary hover:text-white transition-all">
+                        View All Headlines
+                    </button>
+</div>
+<div class="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
+<img alt="Lidar Visualization" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Abstract lidar point cloud visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDx9iZcIMtFAmbUvJ-XnCOqtJOl1tnPBOu5K_YPWf1GmOyteWWNR3hKXl5uosmDajiaaNAflhE_TiyhyHeguqa2qQZDbPMBwJKteYb2z83_6rAw3jvgfLIdgIbUBejlZSWr-R2Tqx_PB0aIkpO-qFJXp3FAg742Fk35MEpFu0PFMpIlnsyy05JqEuXbN6ZGBnsAcDqJdXxg3SXNej-uLsS3Zz2BQ7IXMQTlzb9gt8W9x6iuvPvKvfrmxoLUR7CLyPRq4MLt6HiekI"/>
+<div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-all"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-white font-bold text-2xl uppercase italic tracking-tighter">Visualizing Speed</span>
+<p class="text-white/80 text-xs mt-1 uppercase tracking-widest font-medium">The Art of Perception Data</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sponsorship Spotlight -->
+<section class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-slate-900 text-white rounded-2xl p-12 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<span class="material-icons text-[400px] absolute -top-20 -right-20">handshake</span>
+</div>
+<div class="relative z-10">
+<span class="inline-block px-4 py-1 bg-primary rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">Partnership Excellence</span>
+<h2 class="text-4xl font-bold mb-6">Velocity Systems Joins Deepspeed as Platinum Title Sponsor</h2>
+<p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    A multi-year commitment to pushing the boundaries of edge-computing in high-stakes autonomous racing. Together, we're redefining what's possible on the track.
+                </p>
+<div class="flex gap-4">
+<button class="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Read Press Release</button>
+<button class="border border-white/20 px-8 py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-white/10 transition-all">Our Partners</button>
+</div>
+</div>
+<div class="relative z-10 flex justify-center items-center h-full">
+<div class="w-full max-w-sm aspect-square bg-white/5 rounded-full border border-white/10 p-12 flex items-center justify-center">
+<div class="text-center">
+<span class="material-icons text-7xl text-primary mb-4">verified</span>
+<p class="text-2xl font-bold italic tracking-tighter uppercase">Velocity <span class="text-primary">Systems</span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<!-- Article Card -->
+<article class="group">
+<div class="relative h-64 overflow-hidden rounded-xl mb-4">
+<img alt="Coding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Code editor showing complex algorithms" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk3YS6taPra_TFOW-ZwbTpMFWtw1tSslasxn8Sy9mQzxTsCe5Dkv1mEqFiuAFu9rq7pai1XcnhVDaEtqyuyubAGa8SXIIR2DWR59pkxZTfxaS7WbyFWsd82l1AtWnBqiJ-1IggXfPivW1uDsfubM441kj9xz6V5M3bs0g3XOMgwF-tRc8jGrY2WDEARZd51jFyiwQwNyCdJmQj31X9eJtPx0gVmK8ndv6HM-uYfF_IGbkRlavxkpd9YKtI9B-IoyagtD-8b_I05K4"/>
+<div class="absolute bottom-4 left-4">
+<span class="px-2 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded">Open Source</span>
+</div>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Optimizing Python for RT-Performance</h4>
+<p class="text-slate-500 text-sm line-clamp-2">Our latest contribution to the F1TENTH gym environment focuses on multi-threaded reward calculation.</p>
+<div class="mt-4 flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>Oct 12, 2023</span>
+<span>4 Min Read</span>
+</div>
+</article>
+<!-- Article Card -->
+<article class="group">
+<div class="relative h-64 overflow-hidden rounded-xl mb-4">
+<img alt="Racing helmet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Professional racing helmet on pit wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBUfteNTKRh1TT1kGm1F1C9BAlQGMz1odZNwQMUfhCKOjxvHDCUe2HinKg6hjN3oRLuR3PWATf3nfXfTubADATDjEboNZovdIHzX-QEZr1rKFoMZBULXB91yb-54kxQCXJ20FLtUGLUNHQiQl1fw3occ2Pr492zCoWmKExKvnvZKDseTjIZD61h4-jUx9q8G_mN3iAokQbGWbDH2b8FsrsNmhLLMqqkMtw-eTy_lPXLWePz1RaYdJFndqDCA3UC8VtxXHStGnQ1OU"/>
+<div class="absolute bottom-4 left-4">
+<span class="px-2 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded">Behind Scenes</span>
+</div>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Psychology of No-Driver Racing</h4>
+<p class="text-slate-500 text-sm line-clamp-2">Exploring the team dynamics and emotional stakes in a sport where the athlete is an algorithm.</p>
+<div class="mt-4 flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>Oct 05, 2023</span>
+<span>6 Min Read</span>
+</div>
+</article>
+<!-- Article Card -->
+<article class="group">
+<div class="relative h-64 overflow-hidden rounded-xl mb-4">
+<img alt="AI concept" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Futuristic AI and robotic concept art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPgZbvhdyKcUohKtWhoF2c2Bh5yCBQ_unxoNnCmdrtTz-1C5Dit1C3MHgTJjLcPemNCTyJvsBd-Uue6HEE8dS-4QHIUFvpvJVcjhzNp9CvH2JsD8bLBOwNiuw8uD3mw94tBspCqNnKpq9pCOxaT5k_WuMXnH0-T9NU3SU3X0o7zicPk0zVnyBPRRUOYP0yOt6-bMgmtjdhJnosIMQtjabv_EYgs6RBX5TiTM8DHC-8FwaU-iEc-IeD8Mu905iMKw8L03iCElRWhmM"/>
+<div class="absolute bottom-4 left-4">
+<span class="px-2 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded">Future Tech</span>
+</div>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">2024 Roadmap: Swarm Intelligence</h4>
+<p class="text-slate-500 text-sm line-clamp-2">Our vision for multi-agent coordination in competitive autonomous racing environments.</p>
+<div class="mt-4 flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>Sep 28, 2023</span>
+<span>10 Min Read</span>
+</div>
+</article>
+</div>
+<!-- Newsletter -->
+<section class="mt-20 border-t border-primary/10 pt-20 pb-12 text-center">
+<div class="max-w-2xl mx-auto">
+<h3 class="text-4xl font-bold mb-4 italic tracking-tighter uppercase">Stay Ahead of the <span class="text-primary">Curve</span></h3>
+<p class="text-slate-600 dark:text-slate-400 mb-8">Get technical deep-dives and race updates delivered straight to your inbox. No fluff, just engineering excellence.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-6 py-4 bg-white dark:bg-slate-800 border-2 border-primary/10 rounded-lg focus:outline-none focus:border-primary transition-colors font-medium" placeholder="Enter your email address" type="email"/>
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-bold uppercase tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all">Subscribe</button>
+</form>
+<p class="text-[10px] text-slate-400 mt-4 uppercase tracking-[0.2em]">Join 5,000+ AI &amp; Racing enthusiasts</p>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark text-white pt-20 pb-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary flex items-center justify-center rounded">
+<span class="material-icons text-white text-sm">speed</span>
+</div>
+<span class="text-xl font-bold tracking-tighter uppercase italic">Deep<span class="text-primary">speed</span></span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">Pioneering the future of autonomous mobility through competitive motorsport research and development.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 bg-white/5 rounded flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-icons text-sm">terminal</span>
+</a>
+<a class="w-8 h-8 bg-white/5 rounded flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-icons text-sm">public</span>
+</a>
+<a class="w-8 h-8 bg-white/5 rounded flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-icons text-sm">groups</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-primary">Team</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Engineering Squad</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Career Opportunities</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Media Kit</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-primary">Tech</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Stack Overview</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Research Papers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Hardware Labs</a></li>
+<li><a class="hover:text-white transition-colors" href="#">GitHub Repo</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-primary">Connect</h5>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Partner With Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Technical Support</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms of Racing</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:row items-center justify-between gap-4">
+<p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2023 DEEPSPEED RACING. ALL ANALYTICS RESERVED.</p>
+<div class="flex gap-8 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Telemetry Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Safety Systems</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

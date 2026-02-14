@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technology | Deepspeed Engineering &amp; Tech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .tech-grid { background-image: radial-gradient(circle, #0d59f2 1px, transparent 1px); background-size: 32px 32px; background-opacity: 0.05; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(8px); border: 1px solid rgba(13, 89, 242, 0.1); }
+        .code-block { font-family: 'JetBrains Mono', monospace; }
+        .scan-line { height: 2px; background: linear-gradient(to right, transparent, #0d59f2, transparent); width: 100%; position: absolute; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-primary flex items-center justify-center rounded">
+<span class="material-icons-round text-white text-xl">speed</span>
+</div>
+<span class="text-xl font-bold tracking-tighter uppercase">Deepspeed<span class="text-primary font-light">.Tech</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide">
+<a class="hover:text-primary transition-colors uppercase" href="#">Fleet</a>
+<a class="text-primary uppercase border-b-2 border-primary" href="#">Technology</a>
+<a class="hover:text-primary transition-colors uppercase" href="#">Simulation</a>
+<a class="hover:text-primary transition-colors uppercase" href="#">Team</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-primary/90 transition-all uppercase tracking-widest">
+                Partner with us
+            </button>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero: Architecture Header -->
+<section class="pt-16 pb-24 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<h2 class="text-primary font-bold text-sm tracking-[0.2em] uppercase mb-4">Engineering Excellence</h2>
+<h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tight mb-6">F1TENTH CAR<br/><span class="text-primary">ARCHITECTURE</span></h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg">A high-performance synthesis of custom-engineered hardware and state-of-the-art autonomous racing stacks.</p>
+</div>
+<div class="flex space-x-4">
+<div class="p-4 border border-primary/20 rounded-xl bg-white dark:bg-slate-900">
+<p class="text-[10px] uppercase tracking-widest text-slate-400 mb-1">Compute Latency</p>
+<p class="text-2xl font-bold text-primary">4.2<span class="text-sm ml-1 font-normal">ms</span></p>
+</div>
+<div class="p-4 border border-primary/20 rounded-xl bg-white dark:bg-slate-900">
+<p class="text-[10px] uppercase tracking-widest text-slate-400 mb-1">Refresh Rate</p>
+<p class="text-2xl font-bold text-primary">120<span class="text-sm ml-1 font-normal">Hz</span></p>
+</div>
+</div>
+</div>
+<!-- Blueprint Viewer -->
+<div class="mt-16 relative aspect-video w-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-primary/10 group">
+<div class="absolute inset-0 opacity-10 tech-grid"></div>
+<img class="w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="Technical blueprint render of an F1TENTH car chassis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvXPUytaz7LbJxj51UzjMwoIid2LQcrSRc95UwDpGE_RpEJoy7HFg8CuwziawbpZLxPEL7GZMtX7GsLQVlwpmwnFIVlXb49ueHTIzUPSWYlSABFKtYVpHNYKd595l33-De5k8ydHXycoDRHaGdS7vtF4s_AKhgKdmnDjyvDQbhyKvXkPvXW1ZhyeYFtC0XXdEWV6mwjDLrFMCYX9f3fBPuXw1NRyzjr4X9fG2FGco8h4bAvA1vfOokEqeNYIJXB6aHM-cxHcFMhi8"/>
+<!-- Hotspots -->
+<div class="absolute top-[35%] left-[25%] group/spot">
+<div class="w-4 h-4 bg-primary rounded-full animate-ping absolute"></div>
+<div class="w-4 h-4 bg-primary rounded-full relative cursor-pointer"></div>
+<div class="absolute left-6 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-lg border border-primary/20 shadow-xl opacity-0 group-hover/spot:opacity-100 transition-opacity w-48">
+<h4 class="font-bold text-xs uppercase text-primary">Hokuyo 2D LiDAR</h4>
+<p class="text-[10px] text-slate-500 mt-1">30m Range | 270° Field of View</p>
+</div>
+</div>
+<div class="absolute top-[50%] left-[55%] group/spot">
+<div class="w-4 h-4 bg-primary rounded-full animate-ping absolute"></div>
+<div class="w-4 h-4 bg-primary rounded-full relative cursor-pointer"></div>
+<div class="absolute left-6 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800 p-3 rounded-lg border border-primary/20 shadow-xl opacity-0 group-hover/spot:opacity-100 transition-opacity w-48">
+<h4 class="font-bold text-xs uppercase text-primary">Jetson AGX Orin</h4>
+<p class="text-[10px] text-slate-500 mt-1">275 TOPS AI Performance</p>
+</div>
+</div>
+<!-- Overlay Labels -->
+<div class="absolute bottom-8 right-8 flex flex-col items-end">
+<div class="bg-black/80 text-white p-4 font-mono text-xs rounded-lg backdrop-blur shadow-2xl space-y-2 border border-white/10">
+<div class="flex justify-between w-48"><span>STEER_ANGLE:</span> <span class="text-primary">+12.4°</span></div>
+<div class="flex justify-between w-48"><span>VELOCITY:</span> <span class="text-primary">8.42 m/s</span></div>
+<div class="flex justify-between w-48"><span>BATTERY_V:</span> <span class="text-primary">14.8V</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specification Section -->
+<section class="bg-white dark:bg-slate-900 border-y border-primary/10 py-24 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+<!-- Column 1: Perception -->
+<div class="space-y-8">
+<div class="flex items-center space-x-3">
+<span class="material-icons-round text-primary">visibility</span>
+<h3 class="text-xl font-bold tracking-tight uppercase">Perception Stack</h3>
+</div>
+<div class="space-y-4">
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-xl border-l-4 border-primary">
+<h4 class="font-bold text-sm mb-2 uppercase tracking-wide">SLAM &amp; Mapping</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Iterative Closest Point (ICP) based mapping for high-fidelity track modeling.</p>
+</div>
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-xl border-l-4 border-primary/40">
+<h4 class="font-bold text-sm mb-2 uppercase tracking-wide">Dynamic Obstacle Detection</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Bayesian filtering for multi-agent tracking and velocity estimation.</p>
+</div>
+</div>
+<div class="pt-4">
+<div class="code-block bg-slate-950 text-slate-300 p-4 rounded-xl text-xs overflow-hidden relative">
+<div class="flex justify-between mb-2 text-slate-500 font-sans border-b border-slate-800 pb-2">
+<span>lidar_filter.cpp</span>
+<span class="material-icons-round text-xs">code</span>
+</div>
+<pre class="whitespace-pre-wrap"><code>void processScan(const ScanPtr&amp; msg) {
+  auto filtered = filterNoise(msg);
+  auto clusters = dbScan(filtered);
+  // Publish obstacle poses
+  publishTrackers(clusters);
+}</code></pre>
+</div>
+</div>
+</div>
+<!-- Column 2: Planning -->
+<div class="space-y-8">
+<div class="flex items-center space-x-3">
+<span class="material-icons-round text-primary">psychology</span>
+<h3 class="text-xl font-bold tracking-tight uppercase">Planning Engine</h3>
+</div>
+<div class="space-y-4">
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-xl border-l-4 border-primary">
+<h4 class="font-bold text-sm mb-2 uppercase tracking-wide">Trajectory Optimization</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Sequential Quadratic Programming (SQP) for minimum-time racing lines.</p>
+</div>
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-xl border-l-4 border-primary/40">
+<h4 class="font-bold text-sm mb-2 uppercase tracking-wide">Reactive Planners</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Gap Follower and Pure Pursuit fallback modes for high-speed evasion.</p>
+</div>
+</div>
+<div class="aspect-square bg-slate-100 dark:bg-slate-800 rounded-2xl p-4 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 tech-grid opacity-20"></div>
+<img class="w-full h-full object-cover rounded-lg mix-blend-multiply dark:mix-blend-overlay" data-alt="Data visualization of a racing trajectory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF1f4WOu8pAjrq1zhP2jbg3imGXEQeav66O_8V5pZPgZR3KSA_laRlRJdoxb5lXSCZUphsBtCKY9d23nWugSeyuIkKoKRy_l3TOg7sx80aHaSzvZZKSz53hkXkRFDraPk2qi1BXD3KnMflO3zKcnrHtppMJ-7Vmw_sjRelJ2iJ3Azz_gW6P78rHeQ_iEWHDjU3hRbJa2DYiUMzJKxONeQMVZEE0bLoOfODXRDHzuMwQYnX1QN5JZPlj-Uzjz_DFj_mlRThpL2tqiE"/>
+<div class="absolute inset-0 border-2 border-primary/20 rounded-2xl m-2 pointer-events-none"></div>
+</div>
+</div>
+<!-- Column 3: Control -->
+<div class="space-y-8">
+<div class="flex items-center space-x-3">
+<span class="material-icons-round text-primary">settings_input_component</span>
+<h3 class="text-xl font-bold tracking-tight uppercase">Control System</h3>
+</div>
+<div class="space-y-4">
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-xl border-l-4 border-primary">
+<h4 class="font-bold text-sm mb-2 uppercase tracking-wide">Model Predictive Control</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Non-linear MPC incorporating tire slip and weight transfer models.</p>
+</div>
+<div class="p-6 bg-background-light dark:bg-background-dark rounded-xl border-l-4 border-primary/40">
+<h4 class="font-bold text-sm mb-2 uppercase tracking-wide">Low-Level Feedback</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">VESC-integrated PID loops for precise RPM and current control.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+<div class="text-[10px] text-slate-400 uppercase tracking-tighter mb-1">Update rate</div>
+<div class="text-xl font-bold font-mono">1.0kHz</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+<div class="text-[10px] text-slate-400 uppercase tracking-tighter mb-1">Slip Angle</div>
+<div class="text-xl font-bold font-mono">2.4°</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+<div class="text-[10px] text-slate-400 uppercase tracking-tighter mb-1">CPU Load</div>
+<div class="text-xl font-bold font-mono">14.2%</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+<div class="text-[10px] text-slate-400 uppercase tracking-tighter mb-1">Max Current</div>
+<div class="text-xl font-bold font-mono">60A</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Simulation Pipeline -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">Sim-To-Real Pipeline</h2>
+<p class="text-slate-500 max-w-2xl mx-auto italic">Closing the gap through high-fidelity physics and hardware-in-the-loop validation.</p>
+</div>
+<div class="relative">
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-full h-px bg-primary/20 -translate-y-1/2 hidden lg:block"></div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="relative bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-6 mx-auto">
+<span class="material-icons-round">view_in_ar</span>
+</div>
+<h4 class="text-center font-bold uppercase text-sm mb-2">Digital Twin</h4>
+<p class="text-center text-xs text-slate-500">Photogrammetry-based track scans in Unity &amp; Gazebo.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-6 mx-auto">
+<span class="material-icons-round">terminal</span>
+</div>
+<h4 class="text-center font-bold uppercase text-sm mb-2">Algorithm Training</h4>
+<p class="text-center text-xs text-slate-500">Massively parallel reinforcement learning via AWS clusters.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+<div class="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-6 mx-auto">
+<span class="material-icons-round">memory</span>
+</div>
+<h4 class="text-center font-bold uppercase text-sm mb-2">HIL Validation</h4>
+<p class="text-center text-xs text-slate-500">Hardware-in-the-loop testing on the Jetson edge compute.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative bg-primary p-8 rounded-2xl shadow-xl shadow-primary/20">
+<div class="w-10 h-10 bg-white/20 text-white flex items-center justify-center rounded-lg mb-6 mx-auto">
+<span class="material-icons-round">sports_score</span>
+</div>
+<h4 class="text-center font-bold uppercase text-sm text-white mb-2">Race Track</h4>
+<p class="text-center text-xs text-white/80">Real-world deployment with zero-day hardware calibration.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Hardware Deep Dive -->
+<section class="pb-24 px-6 max-w-7xl mx-auto">
+<div class="bg-slate-950 rounded-[2rem] overflow-hidden relative">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="Abstract circuit board technology pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwfEAghF5l-AecDTpu6OalCXbwuEO_cfgm7vudcWsPQVbd1Hy7F9nksHantcIXK4-0K502PKIRzOiEm2FuG7XTzE1wgz4Zud7zBIqVw8xtO0QpCvo9_5x1hzqOhv8cendkA75_ZlayxeA1Bei1CfpdjwhYURuEhVAkpMw7xcHMWSmy6abtidMIRz9HVCjvcaETUddYQwB-qs2cBGyQlYCtE3vni61hyHDM8Z1nidAB-zSPPobR644sDB1n5d8f-sPADlbN8spSHOM"/>
+</div>
+<div class="relative p-12 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-white text-4xl md:text-5xl font-bold tracking-tight mb-8">NVIDIA JETSON<br/><span class="text-primary">AGX ORIN SERIES</span></h2>
+<p class="text-slate-300 text-lg mb-10">The heart of our car provides server-class AI performance at the edge, enabling us to run complex neural networks for object detection and real-time trajectory optimization simultaneously.</p>
+<div class="grid grid-cols-2 gap-y-8 gap-x-4 border-t border-white/10 pt-10">
+<div>
+<h5 class="text-primary font-bold text-xs uppercase mb-2">CUDA Cores</h5>
+<p class="text-white text-3xl font-bold">2048</p>
+</div>
+<div>
+<h5 class="text-primary font-bold text-xs uppercase mb-2">Memory Bandwidth</h5>
+<p class="text-white text-3xl font-bold">204 GB/s</p>
+</div>
+<div>
+<h5 class="text-primary font-bold text-xs uppercase mb-2">Power Draw</h5>
+<p class="text-white text-3xl font-bold">15W - 60W</p>
+</div>
+<div>
+<h5 class="text-primary font-bold text-xs uppercase mb-2">DL Accelerators</h5>
+<p class="text-white text-3xl font-bold">2x NVDLA v2</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative bg-slate-900 rounded-2xl p-4 overflow-hidden aspect-square flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-xl opacity-80" data-alt="Close up of a high performance microchip" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk3p6vCMhx1VMtpeGQQxb4pB4ATUhC9PtfeD_BJqD7udz6u10JZE1NCkhfASmv9ZK1jl2b4lM2WPnxamZRzm05P1sLMIyAy_HdPpdmpD1MrOXq9m0-g_2vJnwqZGetabA3xnAgzCQijG5XYyKa1CGjaB3-zMVftmtmilW3G6qXPT9JeW0480PExu6QZCqM2H1XFlUsgSnCj3WZVeW8Zsjx1qm7SE830NSquJ3yA3Tpclcpok3vi484yZoP3ZIEpY7nwrMr81-kUX4"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-color"></div>
+<div class="absolute top-0 left-0 w-full h-full scan-line opacity-50"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 border-t border-primary/10 py-16 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-6">
+<div class="flex items-center space-x-2">
+<div class="w-6 h-6 bg-primary flex items-center justify-center rounded-sm">
+<span class="material-icons-round text-white text-sm">speed</span>
+</div>
+<span class="text-lg font-bold uppercase">Deepspeed</span>
+</div>
+<p class="text-slate-500 text-sm max-w-xs">Pioneering the future of autonomous racing through engineering rigor and computational excellence.</p>
+<div class="flex space-x-4">
+<a class="w-8 h-8 rounded border border-primary/20 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<i class="material-icons-round text-lg">public</i>
+</a>
+<a class="w-8 h-8 rounded border border-primary/20 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<i class="material-icons-round text-lg">code</i>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div>
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Stack</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">ROS 2 Humble</a></li>
+<li><a class="hover:text-primary" href="#">FastRTPS</a></li>
+<li><a class="hover:text-primary" href="#">CUDA Libraries</a></li>
+<li><a class="hover:text-primary" href="#">TensorRT</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Hardware</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Jetson Orin</a></li>
+<li><a class="hover:text-primary" href="#">Hokuyo LiDAR</a></li>
+<li><a class="hover:text-primary" href="#">VESC 6.0</a></li>
+<li><a class="hover:text-primary" href="#">StereoLabs ZED2i</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Newsletter</h5>
+<div class="flex">
+<input class="bg-background-light dark:bg-slate-900 border-primary/20 rounded-l-lg text-sm w-full focus:ring-primary focus:border-primary" placeholder="Engineering updates..." type="email"/>
+<button class="bg-primary text-white px-4 rounded-r-lg hover:bg-primary/90">
+<span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-primary/10 mt-16 pt-8 flex justify-between items-center text-[10px] text-slate-400 uppercase tracking-widest">
+<p>© 2024 DEEPSPEED ENGINEERING &amp; TECH. ALL RIGHTS RESERVED.</p>
+<p>DESIGNED FOR HIGH-SPEED PRECISION.</p>
+</div>
+</footer>
+</body></html>
