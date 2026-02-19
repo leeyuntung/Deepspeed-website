@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deepspeed | Beyond the Machine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "accent-red": "#8E1616",
+                        "deep-black": "#1D1616",
+                        "background-light": "#EEEEEE",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1.5rem;
+        }
+        .masonry-item-tall { grid-row: span 2; }
+        .masonry-item-wide { grid-column: span 2; }
+        @media (max-width: 768px) {
+            .masonry-item-wide { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-deep-black dark:text-slate-100 selection:bg-primary/30">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-deep-black/5 dark:border-white/5">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tighter uppercase italic">Deepspeed</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Our Mission</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Gallery</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Tech Hub</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Team</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-deep-black dark:bg-primary text-white text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-accent-red transition-all duration-300">
+                    Partner With Us
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" data-alt="High-contrast motion shot of an autonomous race car on track" style="background-image: linear-gradient(to right, rgba(29, 22, 22, 0.8) 0%, rgba(29, 22, 22, 0.2) 60%, rgba(29, 22, 22, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrL4AZHkQqBplfWI6ftZkgnI2mqI8HtNwd3GuhH0HsMhWpHd1T19LIn5zGo1zqc0Ky5kFpXW_4Qi7aXcnipd3FL7S9GYoocOIXoGppiBPlUZhNrZ8i_tch6Fr2SYbS5GycaHAq2eGVcJNbS8KXfONiQehThx38N5rcr08FhdTqSvqlW3pSfmdCrUacopY4AWybzvQh5byUR8xzZPVwtSL8PdkXaODBB9V8w9fIYprsiEvlZinaJQIvyBWN7EFvMEe3YdzQWFU5Mns');"></div>
+<div class="relative h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-start text-white">
+<span class="inline-block px-3 py-1 bg-accent-red text-[10px] font-bold tracking-[0.3em] uppercase mb-6 rounded">The F1TENTH Vanguard</span>
+<h1 class="font-serif italic text-6xl md:text-8xl leading-none mb-8 max-w-3xl">Beyond the <br/><span class="not-italic font-bold tracking-tighter uppercase text-primary">Machine</span></h1>
+<p class="text-lg md:text-xl font-light max-w-xl leading-relaxed text-slate-300 mb-10">
+                    Engineering the future of autonomous racing with surgical precision and raw passion. Where high-octane performance meets clinical technical excellence.
+                </p>
+<div class="flex gap-4">
+<button class="group flex items-center gap-3 bg-white text-deep-black px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all">
+                        Explore Vision
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white/50 text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Mission Statement Section -->
+<section class="py-24 bg-white dark:bg-background-dark">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-accent-red text-sm font-bold tracking-[0.4em] uppercase mb-8">Clinical Excellence</h2>
+<blockquote class="text-3xl md:text-5xl font-serif italic text-deep-black dark:text-slate-100 leading-tight">
+                    "We don't just build faster cars; we architect the intelligence that makes speed inevitable."
+                </blockquote>
+<div class="mt-12 flex justify-center items-center gap-4">
+<div class="h-[1px] w-12 bg-accent-red"></div>
+<p class="text-deep-black/60 dark:text-slate-400 font-medium uppercase tracking-widest text-xs">The Deepspeed Philosophy</p>
+<div class="h-[1px] w-12 bg-accent-red"></div>
+</div>
+<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+<div>
+<h4 class="font-bold text-lg mb-4 text-primary">01 / Perception</h4>
+<p class="text-sm text-deep-black/70 dark:text-slate-400 leading-relaxed">Advanced LiDAR and computer vision systems processing environments at millisecond scales.</p>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-4 text-primary">02 / Planning</h4>
+<p class="text-sm text-deep-black/70 dark:text-slate-400 leading-relaxed">Optimization algorithms that calculate the ideal racing line while accounting for dynamic obstacles.</p>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-4 text-primary">03 / Control</h4>
+<p class="text-sm text-deep-black/70 dark:text-slate-400 leading-relaxed">Precision actuation systems ensuring every maneuver is executed with absolute aerodynamic fidelity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery of Excellence -->
+<section class="py-24 bg-background-light dark:bg-slate-900">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h3 class="text-4xl font-bold tracking-tighter uppercase mb-4">Gallery of Excellence</h3>
+<p class="text-deep-black/60 dark:text-slate-400 max-w-md">A visual narrative of our journey from the clean-room lab to the heat of the race track.</p>
+</div>
+<div class="flex gap-2">
+<button class="size-12 rounded-full border border-deep-black/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="size-12 rounded-full border border-deep-black/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<div class="masonry-grid">
+<div class="masonry-item-wide masonry-item-tall group relative overflow-hidden rounded-xl">
+<img alt="Chassis engineering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of race car chassis and electronic components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr2tf5adTFj___9TALacFEOnnSq7EfpkJjjLl93lBGECBHQ1cxPOiUobisoV7ENlbvxpA2LUJalqErwqcwJEOZGcg1XfrHvGeLOZnP1Hat66XxJhM4e1FIXiJ8eRtBQ_zi7J9QONmYF9Bde2Y-JCzO9ybKp-q7p20R7XRiZneP3zRBKAJG9VFeZV4teSgE_21iRtSrIft_Wdxo9YOOBH09sDwVwEKp3O3ztqgSoZ-BDa5Jq7qqaB-yzYq5c_4KWF7avQ0BzN2pTr4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-accent-red text-[10px] font-bold uppercase tracking-widest mb-2">Hardware</span>
+<h5 class="text-white font-bold text-xl uppercase italic">Precision Chassis Design</h5>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl">
+<img alt="PCB components" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Detailed view of high-performance microchips and circuitry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtjCDkZgLlv8n62JAa7bcZhUx7-s_0yOWNZrk42qiHoc-VDLMfUm0BsUkedkQelqScltB_DYa496csgAksJIalbDe3bm27DPfwyThFi_q35Xnn0Oql_QcCxfmXwvJqAQnQt-l3IldWbi7MkJl4M1EoA7uZcoRBbvOS4n43q9wH9cnZw45l20lda2eh1Aq_LifNw66cwGw_pmmDkHFCS9EG1dsKUexJv3FCA1bMixaRi6-3YHH_L0ZWw-ggyzF1R3ERvg8EWEq-45k"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+</div>
+<div class="masonry-item-tall group relative overflow-hidden rounded-xl">
+<img alt="Lab environment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Team of engineers working in a sterile high-tech laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP1eztT69SrioLSlOmbyKPKjEpKqnR8BBZEp91y9LpegH2G8D87uUwrSScLBJWQBfRpnc3_ffee_jsdK3n8LJKdH5IOP_9gRqxPilaqcph6xDMXSNUOEUTKF1ubMIPtiQM1Y4-H5NG2A7cuSqr5GJZd0bomGF0KlZXmQaBKOES8PNNU-bJxMl70lbGmZjYd_y2dQsSULQmUoPX_q6-MvYk_xBf_i7RyXLrzjs1Qb_EteV7psrJBug9yZbq4_NgEJ5nVYONxFKyFTw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<h5 class="text-white font-bold text-xl uppercase italic">The Lab Room</h5>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl">
+<img alt="LiDAR visual" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract visualization of LiDAR point cloud data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXpartPS_4UP5QoT1LTnVd69PGdpdxANwTku3RKrNR-OFL5osWb5z5MTO1Zprphs-81i3LC06uFqRNMBxeZgCEp87dsGVJGKwIoLzJDaIAa2M6tta2dC7l0xuabpZCjHmOzE-pzzLYP2E6qOxM3fHxsGGLMACS3gFlXuBNw1CvvDRsHdsAkT-SdvywKeZnlUJQkAx8xhazlUPQWMyRhnREfALYQu8Js91_d_7hi1XCg5EzHZiq50zJPcEByHn3VipMQMKhr9claFY"/>
+</div>
+<div class="masonry-item-wide group relative overflow-hidden rounded-xl">
+<img alt="Night racing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Long exposure shot of race car lights on a dark track" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGSU86PO1UgScFrLnWYccV41KNeG_UayYzCMkWSevae3L3x4AtxxlTT4BKaQ21H3ZQoaspmqm6uOIjEHwK1BPuecpwIVJKu2-YvXTTrTdVAl6UPANnRd-mcRRb4MtpPl4bI2poloOZXDnQwC5U2m-gkh7zKj3ikg_BdGAQpGKdZ8HeHI3DSrphDFh1jZSJ22uw-bLENTa_f1UN-7KGn01sNY4UjmIsRJmnji8I_XViHuMobX2kwexdPQTH6_Q3Hif_IwStfTmT_2Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+<span class="text-accent-red text-[10px] font-bold uppercase tracking-widest mb-2">Competition</span>
+<h5 class="text-white font-bold text-xl uppercase italic">Midnight Trials</h5>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Storytelling / Video Hub -->
+<section class="py-24 bg-deep-black text-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h3 class="text-4xl font-bold tracking-tighter uppercase mb-4 italic">Visual Storytelling</h3>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<!-- Main Video Player -->
+<div class="relative aspect-video w-full rounded-2xl overflow-hidden group cursor-pointer border border-white/10 shadow-2xl">
+<img alt="Cinematic thumbnail" class="w-full h-full object-cover brightness-50 group-hover:scale-105 transition-transform duration-1000" data-alt="Cinematic frame of a race car emerging from shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK3QgkR4pcdZP3wWGqFSgxoXwLkfrdDVQOSkNF-RfSgCk3KGE6nojR9sZo9nxCRzjy3tzUXq7qmkWqpLJkoYd6OLzOTOVlmzEswA1NUJISxoKAeNKw1_3En10lvChhH9Gq3HqAgKLUvuG5iJXSnTHWqXFaH0MqscpzEpDkcfBznVadmcnLxSAcW2JTTVuZnFeRcubA1ohPnz2e-TEzf6g_FPxnvlY6ZS9eeTaE8dn_KtHisHFXdtIqQVZNJAMZF3MuKRY9HsZrvLE"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-24 rounded-full bg-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-8 left-8 right-8 flex items-end justify-between">
+<div>
+<span class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-2 block">Feature Film</span>
+<h4 class="text-2xl font-bold italic uppercase">Autonomy Redefined: The Season Recap</h4>
+</div>
+<div class="flex gap-4 items-center bg-black/40 backdrop-blur px-4 py-2 rounded-lg border border-white/10">
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-white/50 uppercase">Duration</span>
+<span class="text-sm font-bold">04:22</span>
+</div>
+<div class="w-[1px] h-8 bg-white/20"></div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] text-white/50 uppercase">Quality</span>
+<span class="text-sm font-bold text-primary italic">8K</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Clips Carousel -->
+<div class="mt-20">
+<div class="flex items-center justify-between mb-8">
+<h5 class="text-sm font-bold uppercase tracking-widest text-white/60">Technical Micro-Clips</h5>
+<div class="flex gap-4">
+<button class="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-deep-black transition-all">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="size-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-deep-black transition-all">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="group cursor-pointer">
+<div class="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
+<img alt="Telemetry" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" data-alt="Real-time telemetry and data stream visualizer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1rdUU569jsR2-_6GCyxAjIxyygv7TJuGUSsFIRcdmo5QJLQlfclk261MhHO2lyElvyJYhi9DALaMkiwLxwNFKBQcAsqtcO7wTbYcSMd5fjdVtr4cAabWIUuQhERu60dHHBBhqgdwaVBgFJ917qWn0rCqrNpAewJPDJW1pi1MKEdL-JyAczSyFowfg4knST_AIcDI1Gh06xSDA70XvpTi3KjXlWYcQ7fd-ms_HqrwN7RVI_stlVZ4B0maOXXB0jodBgViH0fZz86U"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+</div>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Telemetry</p>
+<h6 class="text-xs font-bold uppercase mt-1">Live Heatmap Analysis</h6>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
+<img alt="Point Cloud" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" data-alt="3D point cloud visualization of a race track" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu0itESrOGF5E6KQWC78hjN1BqcoM0NDrP-awcjRrW0BR84wE5yR2DqtRQPWzAt0UeWPeuYB-rzz9XF_R6zfY3Xs25eHRkc8Jg85W9agTxov--n4My9JfEeKJ3U-bKCfowRHxFV0LfCG5aXPhiSTm_zp6q3AKgAlNC1889YZwGVXuF15Js3gGvwg_IV6QoWuam5xKPY6OBrHv4BuACBSnllb5O6WjT7rF6C5rG0BpCM9OCfXdzDi8hR--wkvi2JO5ei8Z1EclGvo8"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+</div>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">LiDAR</p>
+<h6 class="text-xs font-bold uppercase mt-1">3D SLAM Mapping</h6>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
+<img alt="Neural Net" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" data-alt="Abstract visualization of a neural network training session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyjFKudjL2gsHC7R_SP9jRPfhFniGdWVLNaZeJrfKy4Mj7p6wKRQ_HKph1BoL_zjnMn_3Oe2iWZSLCL1E4G6XswmBC0jhZTyEpt0DruBJ913i7a9tbl2dVa-svisu6LVXdXsVBCyiDkX53zV9AxXu_akYXJynhA0OeugCsugng6tfUCmHD9LNb9eTsoWDr9CkPP6FPwbVcP4qR4sdMXrvHwKrfYtdhzy_lN4_HhXJtjSINJNkMFOm1bf50aRP0LmrqGwOc2iidMA"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+</div>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">AI Hub</p>
+<h6 class="text-xs font-bold uppercase mt-1">Weight Gradient Descent</h6>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
+<img alt="Track view" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" data-alt="Front view camera from the autonomous car perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdn2FHsA-2vgbReQ5Dq6oGm7TPsMNlJAnonzPDdiaDKEcIRMAFZ6ArBFRmHZfd1COKhYnFOuaA6-UEzdTkwjHvTtRrpr2CZ_ed0BuhkAzIE5NllZ-QN4D4Y1VFKdOpLTgqA__XM_spe4PY5tZYP0j-YHdWgm0X9VPvQsiW8P3nXtLCRmHRAmbYummIiPeyjfXDHHn_gV4ZGeilp-TcC9JWQyA2m88oWtU0CSI94x5FK7s4hX_nXKRWB3ki0wkOVPKk-YBHxR44Ho4"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+</div>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">FPOV</p>
+<h6 class="text-xs font-bold uppercase mt-1">The First-Person Race</h6>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark py-20 border-t border-deep-black/5 dark:border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<div class="flex items-center gap-3 mb-8">
+<div class="text-primary">
+<svg class="size-6" fill="currentColor" viewbox="0 0 48 48">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold uppercase italic tracking-tighter">Deepspeed</h2>
+</div>
+<p class="text-deep-black/60 dark:text-slate-400 max-w-sm mb-8 leading-relaxed">
+                        Leading the evolution of autonomous motor sports through high-performance engineering and ethical AI development.
+                    </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-lg bg-deep-black dark:bg-slate-800 text-white flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="size-10 rounded-lg bg-deep-black dark:bg-slate-800 text-white flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold uppercase tracking-widest text-xs mb-8">The Hub</h5>
+<ul class="space-y-4 text-sm text-deep-black/60 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Vision</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Racing Stats</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Technical Docs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Career Hub</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold uppercase tracking-widest text-xs mb-8">Location</h5>
+<p class="text-sm text-deep-black/60 dark:text-slate-400 mb-4" data-location="Zurich, Switzerland">
+                        Zurich Innovation District<br/>
+                        8001 Zurich, CH
+                    </p>
+<div class="h-32 w-full rounded-lg bg-slate-200 dark:bg-slate-800 overflow-hidden relative">
+<img alt="Map" class="w-full h-full object-cover grayscale opacity-50" data-alt="Minimalist map showing team location in Zurich" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsk0S0ofNSdT8C5vhD3dTIuOJhkq8_jC13aFI4W8_lhgJvUDIlu0G0llE_uSemIUTP-R8F5jNoGmByL3U4J2v33vKjtffR_ZA6LYDOkiD9ixpPr-M0mDHeqqB_-jCQU9buyMHTwp-KW9sd0eEhq0U9aMhV4zlqEzRLt7EK2Jq0upHeSkxkUyUh_240SDrGU5GEbt5QQrjvPOVcoEYljr1Df0OUqBZAfPSFil2h10P6zjQwW61YnvhG6cqXyH-cVTrdRRdeQ2cwjZQ"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-deep-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase font-bold tracking-[0.2em] text-deep-black/40 dark:text-slate-500">
+<p>© 2024 DEEPSPEED AUTONOMOUS RACING. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="hover:text-deep-black dark:hover:text-white" href="#">Privacy Protocol</a>
+<a class="hover:text-deep-black dark:hover:text-white" href="#">Technical Terms</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

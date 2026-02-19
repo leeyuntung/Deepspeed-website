@@ -1,8 +1,9 @@
 import { HomeNavbar } from "../../../components/home/HomeNavbar";
 import { HomeFooter } from "../../../components/home/HomeFooter";
 import { AboutHero } from "../../../components/about/AboutHero";
-import { TeamGrid } from "../../../components/about/TeamGrid";
-import { ValuesTicker } from "../../../components/about/ValuesTicker";
+import { MissionStatement } from "../../../components/about/MissionStatement";
+import { GalleryGrid } from "../../../components/about/GalleryGrid";
+import { VideoHub } from "../../../components/about/VideoHub";
 
 export default function AboutPage() {
     return (
@@ -10,8 +11,9 @@ export default function AboutPage() {
             <HomeNavbar />
             <main>
                 <AboutHero />
-                <TeamGrid />
-                <ValuesTicker />
+                <MissionStatement />
+                <GalleryGrid />
+                <VideoHub />
             </main>
             <HomeFooter />
         </div>

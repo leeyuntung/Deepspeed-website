@@ -10,14 +10,14 @@ export function TeamGrid() {
         {
             name: "Subrat Prasad Panda",
             role: "Mentor",
-            department: "Electrical and Electronic Engineering",
+            department: "College of Computing and Data Science",
             linkedin: "https://www.linkedin.com/in/subrat-panda/",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrUMEllFDYgvb9NmV8W0Y_nk1HqUVaG9KoS48jp5PB4zDMSGpRX3_yHEGtmpDEAY87n22dPEzdl-TvJ4J5KXLt9Ksg-sMRg8cHL0CbI0rbaAFiYSM5Oj87GYDns3VQMgEwPRICr1p2KxLQvLuaxVrEoPLG4u__YVsA8qqV7736kpVrNKESzIRSm444aQ643DPvkSPO7BfFnPF7oVMyT1j7MhdjEu77fospRY_ZWFX3Bw66FLEz3PAQIM6oNUDGF1bONm18rlV_muE",
         },
         {
             name: "Edurado de Conto",
             role: "Mentor",
-            department: "Electrical and Electronic Engineering",
+            department: "College of Computing and Data Science",
             linkedin: "https://www.linkedin.com/in/eduardo-de-conto/",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDTtqFBMcOo_VrzVLvVj3zL0TyFFUZKC-guKdYnamamZrQUuJ0tcMry8tQqE064hiYGjY2s_x8Db5o7vQ1wS186EPfzHi3baAQl0ipoAnNU9LUui3B1b6O17Op_dr5_gigTYD-Kivt7LtnsyDxANYBbtWSi1hbTkbEWarLCj9WUX1fGz3p8AQpbDMYz8BQkM2GoZCp8nNJYJk19Y-Zanjbf5SVeNGApgZAwqewiLqLxAP6FJvA1QOckvk52dYTbGPe2eU9iyrOmRfI",
         },
@@ -50,17 +50,11 @@ export function TeamGrid() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-10">
                     <div className="max-w-2xl">
-                        <div className="inline-flex items-center gap-4 mb-8 text-primary">
-                            <span className="h-[1px] w-12 bg-primary"></span>
-                            <span className="text-xs font-bold tracking-[0.4em] uppercase text-primary">
-                                02 // Personnel
-                            </span>
-                        </div>
                         <h2 className="text-6xl font-bold tracking-tight mb-6 uppercase">
                             Current Team
                         </h2>
-                        <p className="text-slate-500 dark:text-slate-400 text-lg uppercase tracking-wider font-light">
-                            We are a team of undergraduate students from the CCDS and EEE of Nanyang Technological University, Singapore.
+                        <p className="text-slate-500 dark:text-slate-400 text-sm tracking-wider font-light">
+                            We are a team of graduate and undergraduate students from the CCDS and EEE of Nanyang Technological University, Singapore.
                         </p>
                     </div>
 

@@ -56,9 +56,41 @@ export function HomeNavbar() {
                     </div>
                 </Link>
                 <div className="hidden md:flex items-center gap-10">
+                    <Link
+                        href="/"
+                        className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest text-white/80"
+                    >
+                        Home
+                    </Link>
+
+                    <div className="relative group">
+                        <button
+                            className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest text-white/80 flex items-center gap-1"
+                        >
+                            About
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div className="absolute top-full left-0 pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                            <div className="bg-slate-900 border border-white/10 p-2 rounded-md shadow-xl flex flex-col gap-1">
+                                <Link
+                                    href="/about/f1tenth"
+                                    className="block px-4 py-2 text-sm text-white/80 hover:text-primary hover:bg-white/5 rounded-sm transition-colors uppercase tracking-widest"
+                                >
+                                    F1TENTH
+                                </Link>
+                                <Link
+                                    href="/about/team"
+                                    className="block px-4 py-2 text-sm text-white/80 hover:text-primary hover:bg-white/5 rounded-sm transition-colors uppercase tracking-widest"
+                                >
+                                    The Team
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
                     {[
-                        { label: "Home", href: "/" },
-                        { label: "About", href: "/about" },
                         { label: "Blog", href: "/blog" },
                         { label: "Technology", href: "/tech" },
                         { label: "Contact", href: "/contact" },
