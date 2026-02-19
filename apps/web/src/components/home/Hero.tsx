@@ -1,4 +1,5 @@
 import { Button } from "@packages/ui/src/Button";
+import Link from "next/link";
 
 export function Hero() {
     return (
@@ -16,7 +17,7 @@ export function Hero() {
                     <span className="text-primary font-bold tracking-[0.5em] uppercase text-sm">
                         Autonomous Division
                     </span>
-                    <h1 className="text-8xl md:text-[10rem] font-bold leading-none tracking-tighter text-white">
+                    <h1 className="text-8xl md:text-[10rem] font-bold italic leading-none tracking-tighter text-white">
                         DEEP<br />
                         <span className="text-outline">SPEED</span>
                     </h1>
@@ -25,13 +26,15 @@ export function Hero() {
                         meet high-performance engineering on the asphalt.
                     </p>
                     <div className="flex gap-4 mt-12">
-                        <Button
-                            size="lg"
-                            className="hover:scale-105 transition-transform flex items-center gap-2"
-                        >
-                            <span>Explore Technology</span>
-                            <span className="material-icons text-sm">arrow_forward</span>
-                        </Button>
+                        <Link href="/tech">
+                            <Button
+                                size="lg"
+                                className="hover:scale-105 transition-transform flex items-center gap-2"
+                            >
+                                <span>Explore Technology</span>
+                                <span className="material-icons text-sm">arrow_forward</span>
+                            </Button>
+                        </Link>
                         <Button variant="outline" size="lg">
                             Watch Reveal
                         </Button>

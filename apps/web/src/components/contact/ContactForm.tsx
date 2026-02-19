@@ -8,7 +8,7 @@ export function ContactForm() {
                     <div className="relative">
                         <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
                         <h2 className="text-5xl font-bold uppercase mb-8 leading-tight">
-                            Connect with the <span className="italic text-primary">Pit Crew</span>
+                            Connect with us
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 mb-10">
                             Whether you&apos;re looking to join the team, partner with us, or just
@@ -41,7 +41,7 @@ export function ContactForm() {
                                     <h4 className="font-bold text-sm uppercase tracking-widest">
                                         Inquiries
                                     </h4>
-                                    <p className="text-slate-500 text-sm">race@deepspeed.ai</p>
+                                    <p className="text-slate-500 text-sm">ntu-deepspeed@e.ntu.edu.sg</p>
                                 </div>
                             </div>
                         </div>
