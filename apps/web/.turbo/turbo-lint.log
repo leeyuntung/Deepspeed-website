@@ -1,0 +1,47 @@
+
+
+> web@0.1.0 lint
+> eslint
+
+[1G[0K[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/app/layout.tsx[24m[0m
+[0m  [2m28:9[22m  [33mwarning[39m  Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  [2m@next/next/no-page-custom-font[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/about/AboutHero.tsx[24m[0m
+[0m  [2m51:29[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/about/TeamGrid.tsx[24m[0m
+[0m  [2m83:37[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/blog/ArticleCard.tsx[24m[0m
+[0m  [2m15:17[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/blog/BlogGrid.tsx[24m[0m
+[0m  [2m10:21[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m  [2m88:21[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/blog/FeaturedPost.tsx[24m[0m
+[0m  [2m6:13[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/contact/ContactForm.tsx[24m[0m
+[0m  [2m46:29[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/contact/ContactHero.tsx[24m[0m
+[0m  [2m7:21[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/home/Hero.tsx[24m[0m
+[0m   [2m7:17[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m  [2m42:17[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/home/Mission.tsx[24m[0m
+[0m  [2m38:25[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/home/TechnicalBreakdown.tsx[24m[0m
+[0m  [2m60:25[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[4m/Users/sunnylee/Deepspeed-web/apps/web/src/components/racing/Timeline.tsx[24m[0m
+[0m  [2m28:29[22m  [33mwarning[39m  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  [2m@next/next/no-img-element[22m[0m
+[0m[0m
+[0m[33m[1m✖ 14 problems (0 errors, 14 warnings)[22m[39m[0m
+[0m[33m[1m[22m[39m[0m
+[1G[0K⠙[1G[0K

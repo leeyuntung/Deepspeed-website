@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0d59f2;
+  --color-background-light: #f5f6f8;
+  --color-background-dark: #101622;
+  --color-carbon: #1a1a1a;
+  --color-racing-red: #e61a1a;
+  --color-race-dark: #0a0e17;
+
+  --font-display: "Space Grotesk", sans-serif;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+:root {
+  --background: #f5f6f8;
+  --foreground: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #101622;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities from Stitch */
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+.carbon-pattern {
+  background-image: linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+    linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+  background-size: 4px 4px;
+  background-color: #151515;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(13, 89, 242, 0.1);
+}
+
+.dark-card {
+  background: #0a0e17;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-primary {
+  box-shadow: 0 0 20px rgba(13, 89, 242, 0.3);
+}
+
+.timeline-line {
+    background: linear-gradient(180deg, #0d59f2 0%, #0d59f2 70%, rgba(13, 89, 242, 0.1) 100%);
+}
