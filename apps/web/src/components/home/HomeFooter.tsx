@@ -8,7 +8,7 @@ export function HomeFooter() {
                 <div className="grid md:grid-cols-4 gap-12 mb-20">
                     <div className="col-span-2">
                         <div className="flex items-center gap-2 mb-8">
-                            <div className="relative h-12 w-48 mb-8">
+                            <div className="relative h-20 w-80 mb-8">
                                 <Image
                                     src="/deepspeed_logo.png"
                                     alt="DEEPSPEED"
