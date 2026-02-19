@@ -68,7 +68,9 @@ export function HomeNavbar() {
                     ))}
                 </div>
                 <div className="flex items-center gap-6">
-                    <Button size="sm">Join the Grid</Button>
+                    <Link href="/recruit">
+                        <Button size="sm">Join the Grid</Button>
+                    </Link>
                 </div>
             </div>
         </nav>

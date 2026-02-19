@@ -65,5 +65,5 @@ body {
 }
 
 .timeline-line {
-    background: linear-gradient(180deg, #0d59f2 0%, #0d59f2 70%, rgba(13, 89, 242, 0.1) 100%);
+  background: linear-gradient(180deg, #0d59f2 0%, #0d59f2 70%, rgba(13, 89, 242, 0.1) 100%);
 }

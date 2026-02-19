@@ -2,35 +2,35 @@ export function JobListings() {
     const jobs = [
         {
             department: "Software",
-            title: "Perception Engineer",
+            title: "Junior member",
             description:
                 "Optimize LiDAR and camera fusion algorithms for ultra-high speed navigation.",
             location: "Remote / On-site",
         },
         {
             department: "Software",
-            title: "Motion Planning Lead",
+            title: "Junior member",
             description:
                 "Develop racing line optimization strategies and aggressive overtaking maneuvers.",
             location: "Berlin / Tech Lab",
         },
         {
             department: "Engineering",
-            title: "Control Systems Specialist",
+            title: "Junior member",
             description:
                 "Refine low-level MCU controls for millisecond response times in high-G corners.",
             location: "Engineering HQ",
         },
         {
             department: "Engineering",
-            title: "Hardware Integrator",
+            title: "Junior member",
             description:
                 "Design bespoke chassis and heat management systems for 1:10 scale race cars.",
             location: "On-site Workshop",
         },
         {
             department: "Creative",
-            title: "Brand Strategist",
+            title: "Junior member",
             description:
                 "Tell the story of autonomous racing through high-impact visual narratives.",
             location: "Remote Friendly",

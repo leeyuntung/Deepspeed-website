@@ -24,7 +24,10 @@ export function ContactForm() {
                                         Base of Operations
                                     </h4>
                                     <p className="text-slate-500 text-sm">
-                                        Tech Corridor, Silverstone Way, DE-509
+                                        Hardware and Embedded Systems Lab (HESL)
+                                        College of Computing and Data Science
+                                        Nanyang Technological University
+                                        50 Nanyang Avenue, Singapore 639798
                                     </p>
                                 </div>
                             </div>
