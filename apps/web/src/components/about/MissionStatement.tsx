@@ -23,8 +23,8 @@ export function MissionStatement() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-3xl md:text-5xl font-serif italic text-deep-black dark:text-slate-100 leading-tight"
                 >
-                    "We don't just build faster cars; we architect the intelligence that makes
-                    speed inevitable."
+                    &quot;We don&apos;t just build faster cars; we architect the intelligence that makes
+                    speed inevitable.&quot;
                 </motion.blockquote>
 
                 <div className="mt-12 flex justify-center items-center gap-4">
