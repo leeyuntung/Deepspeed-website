@@ -6,11 +6,11 @@
 [1G[0K[1m[38;2;173;127;168m▲ Next.js 16.1.6[39m[22m (Turbopack)
 
 [37m[1m [22m[39m Creating an optimized production build ...
-[32m[1m✓[22m[39m Compiled successfully in 1328.6ms
-[?25l[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[?25h[?25l[37m[1m [22m[39m Finished TypeScript in 1224.9ms  [36m.[39m[2K[1G[?25h[37m[1m [22m[39m Finished TypeScript in 1224.9ms    [32m[1m✓[22m[39m Finished TypeScript in 1224.9ms 
-[?25l[37m[1m [22m[39m Collecting page data using 9 workers  [36m.[39m[2K[1G[37m[1m [22m[39m Collecting page data using 9 workers  [36m..[39m[2K[1G[?25h[37m[1m [22m[39m Collecting page data using 9 workers in 241.8ms    [32m[1m✓[22m[39m Collecting page data using 9 workers in 241.8ms 
-[?25l[37m[1m [22m[39m Generating static pages using 9 workers (0/12)  [36m[    ][39m[2K[1G[1A[2K[1G[?25h[32m[1m✓[22m[39m Generating static pages using 9 workers (12/12) in 134.5ms
-[?25l[37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G[37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G[37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G[?25h[37m[1m [22m[39m Finalizing page optimization in 517.9ms    [32m[1m✓[22m[39m Finalizing page optimization in 517.9ms 
+[32m[1m✓[22m[39m Compiled successfully in 1299.7ms
+[?25l[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[?25h[?25l[37m[1m [22m[39m Finished TypeScript in 1153.9ms  [36m.[39m[2K[1G[?25h[37m[1m [22m[39m Finished TypeScript in 1153.9ms    [32m[1m✓[22m[39m Finished TypeScript in 1153.9ms 
+[?25l[37m[1m [22m[39m Collecting page data using 9 workers  [36m.[39m[2K[1G[37m[1m [22m[39m Collecting page data using 9 workers  [36m..[39m[2K[1G[?25h[37m[1m [22m[39m Collecting page data using 9 workers in 274.9ms    [32m[1m✓[22m[39m Collecting page data using 9 workers in 274.9ms 
+[?25l[37m[1m [22m[39m Generating static pages using 9 workers (0/12)  [36m[    ][39m[2K[1G[1A[2K[1G[?25h[32m[1m✓[22m[39m Generating static pages using 9 workers (12/12) in 123.8ms
+[?25l[37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G[37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G[37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G[?25h[37m[1m [22m[39m Finalizing page optimization in 519.6ms    [32m[1m✓[22m[39m Finalizing page optimization in 519.6ms 
 
 [4mRoute (app)[24m
 ┌ ○ /
