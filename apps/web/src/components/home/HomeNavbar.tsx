@@ -47,7 +47,7 @@ export function HomeNavbar() {
                 >
                     <div className="relative h-10 w-40">
                         <Image
-                            src="/deepspeed_logo.png"
+                            src="/Deepspeed-website/deepspeed_logo.png"
                             alt="DEEPSPEED"
                             fill
                             className="object-contain object-left"

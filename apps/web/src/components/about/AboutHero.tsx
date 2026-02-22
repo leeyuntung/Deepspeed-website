@@ -10,7 +10,7 @@ export function AboutHero() {
             {/* Background Image with Gradient Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/car.jpg"
+                    src="/Deepspeed-website/car.jpg"
                     alt="Autonomous race car on track"
                     fill
                     className="object-cover object-center"

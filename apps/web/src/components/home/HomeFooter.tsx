@@ -10,7 +10,7 @@ export function HomeFooter() {
                         <div className="flex items-center gap-2 mb-8">
                             <div className="relative h-20 w-80 mb-8">
                                 <Image
-                                    src="/deepspeed_logo.png"
+                                    src="/Deepspeed-website/deepspeed_logo.png"
                                     alt="DEEPSPEED"
                                     fill
                                     className="object-contain object-left"

@@ -20,7 +20,7 @@ export function TeamHero() {
             {/* Background Image with Parallax */}
             <motion.div style={{ y }} className="absolute inset-0 z-0">
                 <Image
-                    src="/team_image.jpg"
+                    src="/Deepspeed-website/team_image.jpg"
                     alt="The Team Background"
                     fill
                     className="object-cover opacity-100"

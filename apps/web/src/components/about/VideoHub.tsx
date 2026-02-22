@@ -76,7 +76,7 @@ export function VideoHub() {
                         </div>
                     ) : (
                         <video
-                            src="/car_footage_1.mp4"
+                            src="/Deepspeed-website/car_footage_1.mp4"
                             className="w-full h-full object-cover"
                             controls
                             autoPlay
@@ -104,7 +104,7 @@ export function VideoHub() {
                         <div className="group cursor-pointer">
                             <div className="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
                                 <video
-                                    src="/telemetry.mp4"
+                                    src="/Deepspeed-website/telemetry.mp4"
                                     poster="https://lh3.googleusercontent.com/aida-public/AB6AXuC1rdUU569jsR2-_6GCyxAjIxyygv7TJuGUSsFIRcdmo5QJLQlfclk261MhHO2lyElvyJYhi9DALaMkiwLxwNFKBQcAsqtcO7wTbYcSMd5fjdVtr4cAabWIUuQhERu60dHHBBhqgdwaVBgFJ917qWn0rCqrNpAewJPDJW1pi1MKEdL-JyAczSyFowfg4knST_AIcDI1Gh06xSDA70XvpTi3KjXlWYcQ7fd-ms_HqrwN7RVI_stlVZ4B0maOXXB0jodBgViH0fZz86U"
                                     className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity"
                                     muted
@@ -129,7 +129,7 @@ export function VideoHub() {
                         <div className="group cursor-pointer">
                             <div className="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
                                 <video
-                                    src="/lidar.mp4"
+                                    src="/Deepspeed-website/lidar.mp4"
                                     poster="https://lh3.googleusercontent.com/aida-public/AB6AXuBu0itESrOGF5E6KQWC78hjN1BqcoM0NDrP-awcjRrW0BR84wE5yR2DqtRQPWzAt0UeWPeuYB-rzz9XF_R6zfY3Xs25eHRkc8Jg85W9agTxov--n4My9JfEeKJ3U-bKCfowRHxFV0LfCG5aXPhiSTm_zp6q3AKgAlNC1889YZwGVXuF15Js3gGvwg_IV6QoWuam5xKPY6OBrHv4BuACBSnllb5O6WjT7rF6C5rG0BpCM9OCfXdzDi8hR--wkvi2JO5ei8Z1EclGvo8"
                                     className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity"
                                     muted
@@ -154,7 +154,7 @@ export function VideoHub() {
                         <div className="group cursor-pointer">
                             <div className="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
                                 <video
-                                    src="/ai-hub.mp4"
+                                    src="/Deepspeed-website/ai-hub.mp4"
                                     poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyjFKudjL2gsHC7R_SP9jRPfhFniGdWVLNaZeJrfKy4Mj7p6wKRQ_HKph1BoL_zjnMn_3Oe2iWZSLCL1E4G6XswmBC0jhZTyEpt0DruBJ913i7a9tbl2dVa-svisu6LVXdXsVBCyiDkX53zV9AxXu_akYXJynhA0OeugCsugng6tfUCmHD9LNb9eTsoWDr9CkPP6FPwbVcP4qR4sdMXrvHwKrfYtdhzy_lN4_HhXJtjSINJNkMFOm1bf50aRP0LmrqGwOc2iidMA"
                                     className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity"
                                     muted
@@ -179,7 +179,7 @@ export function VideoHub() {
                         <div className="group cursor-pointer">
                             <div className="aspect-video bg-zinc-900 rounded-lg overflow-hidden mb-3 relative">
                                 <video
-                                    src="/fpov.mp4"
+                                    src="/Deepspeed-website/fpov.mp4"
                                     poster="https://lh3.googleusercontent.com/aida-public/AB6AXuBdn2FHsA-2vgbReQ5Dq6oGm7TPsMNlJAnonzPDdiaDKEcIRMAFZ6ArBFRmHZfd1COKhYnFOuaA6-UEzdTkwjHvTtRrpr2CZ_ed0BuhkAzIE5NllZ-QN4D4Y1VFKdOpLTgqA__XM_spe4PY5tZYP0j-YHdWgm0X9VPvQsiW8P3nXtLCRmHRAmbYummIiPeyjfXDHHn_gV4ZGeilp-TcC9JWQyA2m88oWtU0CSI94x5FK7s4hX_nXKRWB3ki0wkOVPKk-YBHxR44Ho4"
                                     className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity"
                                     muted
