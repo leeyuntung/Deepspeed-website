@@ -79,12 +79,12 @@ export function ContactForm() {
                             </div>
                             <div className="space-y-2">
                                 <label className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                                    LinkedIn Profile URL
+                                    Instagram Handle
                                 </label>
                                 <input
                                     className="w-full bg-slate-50 dark:bg-slate-800 border-none rounded p-4 focus:ring-2 focus:ring-primary/50 transition-all outline-none"
-                                    placeholder="linkedin.com/in/username"
-                                    type="url"
+                                    placeholder="@username"
+                                    type="text"
                                 />
                             </div>
                             <div className="space-y-2">

@@ -4,42 +4,42 @@ export function TeamGrid() {
             name: "Assoc Prof Arvind Easwaran",
             role: "Mentor",
             department: "College of Computing and Data Science",
-            linkedin: "https://www.linkedin.com/in/arvind-easwaran-8889a716/",
+            instagram: "#",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrUMEllFDYgvb9NmV8W0Y_nk1HqUVaG9KoS48jp5PB4zDMSGpRX3_yHEGtmpDEAY87n22dPEzdl-TvJ4J5KXLt9Ksg-sMRg8cHL0CbI0rbaAFiYSM5Oj87GYDns3VQMgEwPRICr1p2KxLQvLuaxVrEoPLG4u__YVsA8qqV7736kpVrNKESzIRSm444aQ643DPvkSPO7BfFnPF7oVMyT1j7MhdjEu77fospRY_ZWFX3Bw66FLEz3PAQIM6oNUDGF1bONm18rlV_muE",
         },
         {
             name: "Subrat Prasad Panda",
             role: "Mentor",
             department: "College of Computing and Data Science",
-            linkedin: "https://www.linkedin.com/in/subrat-panda/",
+            instagram: "#",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrUMEllFDYgvb9NmV8W0Y_nk1HqUVaG9KoS48jp5PB4zDMSGpRX3_yHEGtmpDEAY87n22dPEzdl-TvJ4J5KXLt9Ksg-sMRg8cHL0CbI0rbaAFiYSM5Oj87GYDns3VQMgEwPRICr1p2KxLQvLuaxVrEoPLG4u__YVsA8qqV7736kpVrNKESzIRSm444aQ643DPvkSPO7BfFnPF7oVMyT1j7MhdjEu77fospRY_ZWFX3Bw66FLEz3PAQIM6oNUDGF1bONm18rlV_muE",
         },
         {
             name: "Edurado de Conto",
             role: "Mentor",
             department: "College of Computing and Data Science",
-            linkedin: "https://www.linkedin.com/in/eduardo-de-conto/",
+            instagram: "#",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDTtqFBMcOo_VrzVLvVj3zL0TyFFUZKC-guKdYnamamZrQUuJ0tcMry8tQqE064hiYGjY2s_x8Db5o7vQ1wS186EPfzHi3baAQl0ipoAnNU9LUui3B1b6O17Op_dr5_gigTYD-Kivt7LtnsyDxANYBbtWSi1hbTkbEWarLCj9WUX1fGz3p8AQpbDMYz8BQkM2GoZCp8nNJYJk19Y-Zanjbf5SVeNGApgZAwqewiLqLxAP6FJvA1QOckvk52dYTbGPe2eU9iyrOmRfI",
         },
         {
             name: "Lee Yun-Tung",
             role: "Member",
             department: "Computer Science",
-            linkedin: "https://www.linkedin.com/in/yun-tung-lee/",
+            instagram: "#",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBt64TBH5m_fxn7meuyU0VWtiaBjIcVkPasdY2Cxv2kOFSTIXruo8pcciEch5EdF1oEhYecEjWurqkgfJbE1hoMXOXEqj9Zcf3at7C5GOCS3km54w6y8pwWIsCZNc-3ZuFzCqZ9T3OEsrKY1kBqcHEDYwSrDwPeepzvP7u0EpqaML7quAfFy-xzCOGoHCu4GkKjkNMrhm5qTJnsz2f_mB9fxYBv6m__gIZzfZ-U3HD3N3__EOXbIgcvMSt6KT_rXvqQqV6E9qXOwIY",
         },
         {
             name: "Wang Kahlok",
             role: "Member",
             department: "Electrical and Electronic Engineering",
-            linkedin: "#",
+            instagram: "#",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-X5Y7OnUhAEDwFt4k-MUo1pIE6Fh9iiIDhy72pjNrhy4LOQRWmzKmkcRIMr3GOP5zvHOQRzMggQThcZ7GZfytYHvGrq6W8Ze58x5fGVswIJJ3NhrpbIthwnsfALFzGD1ztz7qOq7_7mjWBsj3w8pw3bQnmwTRU75UmozxpHMTPgbyf5ZTCp2i7yyUPDU1rJBK3jBqvOPoavmgUXxglodvUhTwOUU6aDmznD-lnRiOfdili5R0q403iT3mFuL_x8sR0sUYQACMT74",
         },
         {
             name: "Chen Ting-Ju",
             role: "Member",
             department: "Electrical and Electronic Engineering",
-            linkedin: "#",
+            instagram: "#",
             image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAlxpPejZkeiLbP5iSSRUtPTXvi8YscIU56dFYNcyWG9G554Vxj4QTo0xfFxcIXi4QP2HI39euyIhsztXVFK_8o_JX9106Sb6i3xAj_rfYFWIStmftOTpYA1PZsdqQrhDMaTI-dkpzoa94iETeBf8tkkATvIaodXR4JQ6vNeVSksUE_3IFJ_ZUt4w3fLTwShkzNPOxVhA4MmelXoo8vXyzD2IIViZxSrtaTJGpMZoHNLVI5wn20-iuB4ALegFf9mQaeygrIpIRW_t4",
         },
 
@@ -91,12 +91,12 @@ export function TeamGrid() {
                                     </p>
                                     <div className="pt-2">
                                         <a
-                                            href={member.linkedin}
+                                            href={member.instagram}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-colors"
                                         >
-                                            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                                            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.247 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.247-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.247-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.247 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z" /></svg>
                                         </a>
                                     </div>
                                 </div>
